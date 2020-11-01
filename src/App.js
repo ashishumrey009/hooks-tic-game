@@ -4,9 +4,10 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const initMatrix = [];
+const matrixSize =4
 function App() {
   const [matrix, setMatrix] = useState(initMatrix);
-  const [matrixSize, setMatrixSize] = useState(4);
+ // const [matrixSize, setMatrixSize] = useState(4);
   const [currentPlayer, setCurrentPlayer] = useState("o");
   const [selR, setSelR] = useState(null);
   const [selC, setSelC] = useState(null);
@@ -39,7 +40,7 @@ function App() {
       setMatrix(matrixCopy);
     }
   }
-
+  // console.log(setMatrixSize)
   function isWinner() {
     let vertical = true;
     let horizontal = true;
